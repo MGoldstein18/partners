@@ -19,7 +19,6 @@ const sendRequest = (req, res) => {
   const email = req.body.email;
   const partnerEmail = req.body.partnerEmail;
 
-  
   const filter = { email: email };
   const update = {
     $push: {
@@ -49,11 +48,55 @@ const sendRequest = (req, res) => {
       console.log(user);
     })
     .catch((err) => res.status(400).json(`Error: ${err}`));
+};
 
-  
+const acceptRequest = (req, res) => {
+  const email = req.body.email;
+  const partnerEmail = req.body.partnerEmail;
+
+  const filter = { email: email };
+  const update = {
+    $push: {
+      partners: {
+        email: partnerEmail,
+      },
+    },
+    $pull: {
+      receivedRequests: {
+        email: partnerEmail,
+      },
+    },
+  };
+
+  User.findOneAndUpdate(filter, update)
+    .then((user) => {
+      console.log(user);
+    })
+    .catch((err) => res.status(400).json(`Error: ${err}`));
+
+  const partnerFilter = { email: partnerEmail };
+  const partnerUpdate = {
+    $push: {
+      partners: {
+        email: email,
+      },
+    },
+    $pull: {
+      sentRequests: {
+        email: email,
+      },
+    },
+  };
+
+  User.findOneAndUpdate(partnerFilter, partnerUpdate)
+    .then((user) => {
+      console.log(user);
+    })
+    .catch((err) => res.status(400).json(`Error: ${err}`));
 };
 
 module.exports = {
   createUser,
   sendRequest,
+  acceptRequest
 };
