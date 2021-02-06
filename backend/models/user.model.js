@@ -1,7 +1,9 @@
+//require mongoose and schema
 const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
+//create a new schema for a user
 const userSchema = new Schema(
   {
     email: { type: String, required: true },
@@ -15,6 +17,7 @@ const userSchema = new Schema(
   }
 );
 
+//set the user model and export it
 const User = mongoose.model("User", userSchema);
 
 module.exports = User;
