@@ -15,6 +15,7 @@ A user will be able to:
 4. Routes have been added and functions have been tested using Postman
 
 ## What we are doing next:
-1. Start on the front end - Home page, sign up, log in, send/receive requests
-2. Additional details for each user profile, authentication using JWT
-3. Connection to courses
+1. 2F authentication 
+2. Start on the front end - Home page, sign up, log in, send/receive requests
+3. Additional details for each user profile
+4. Connection to courses

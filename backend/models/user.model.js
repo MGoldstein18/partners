@@ -11,6 +11,7 @@ const userSchema = new Schema(
     sentRequests: { type: Array },
     receivedRequests: { type: Array },
     partners: { type: Array },
+    twoF: {type: String}
   },
   {
     timestamps: true,
