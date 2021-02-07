@@ -13,9 +13,9 @@ A user will be able to:
 2. Created a user model which, at this stage, contains only the username, password and arrays for partner requests sent, received and approved. 
 3. Created a controller file and added function for create a user, send and approve partner requests
 4. Routes have been added and functions have been tested using Postman
+5. Added 2F authentication to sign up function in backend
 
 ## What we are doing next:
-1. 2F authentication 
-2. Start on the front end - Home page, sign up, log in, send/receive requests
-3. Additional details for each user profile
-4. Connection to courses
+1. Start on the front end - Home page, sign up, log in, send/receive requests
+2. Additional details for each user profile
+3. Connection to courses
