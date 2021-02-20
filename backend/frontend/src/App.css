@@ -1,0 +1,20 @@
+#home_heading{
+    padding: 10em;
+    background-color: aliceblue;
+}
+
+
+#home_heading * {
+  font-family: Arial;
+  color: midnightblue;
+}
+
+#home_heading h1 {
+  font-size: 64px;
+  font-weight: bold;
+}
+
+#home_heading p {
+  font-size: 24px;
+  font-style: italic;
+}
