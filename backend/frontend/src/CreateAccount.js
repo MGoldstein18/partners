@@ -41,7 +41,7 @@ function CreateAccountForm(props) {
       </Modal.Header>
 
       <Modal.Body>
-        <Form>
+        <Form onSubmit={submit}>
           <Form.Group>
             <Form.Label>Email Address</Form.Label>
             <Form.Control
