@@ -17,6 +17,16 @@ function CreateAccountForm(props) {
     e.preventDefault();
 
     alert(email + password);
+
+    newAccount = {
+      email: email,
+      password: password,
+    };
+
+    axios
+      .post("http://localhost:5000/user/add", newAccount)
+      .then((response) => console.log(response.data))
+      .catch((err) => console.log(err));
   }
 
   return (
