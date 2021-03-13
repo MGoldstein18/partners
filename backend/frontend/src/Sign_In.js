@@ -17,6 +17,11 @@ function Sign_in_form(props) {
     e.preventDefault();
 
     alert(email + password);
+
+    newSignIn = {
+      email: email,
+      password: password,
+    };
   }
 
   return (
