@@ -16,6 +16,7 @@ A user will be able to:
 5. Added 2F authentication to sign up function in backend
 
 ## What we are doing next:
-1. Start on the front end - Home page, sign up, log in, send/receive requests
-2. Additional details for each user profile
-3. Connection to courses with udemy api
+1. Start on the front end - Home page, sign up, log in
+2. Passport.js
+3. Additional details for each user profile
+4. Connection to courses with udemy api
